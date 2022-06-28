@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar</title>
+</head>
+<body>
+    
+    <h1>Modificar usuarios</h1>
+    <form action="/usuarios/modificar/<%= usuarios[0]['id'] %>" method="post">
+
+        <label for="nombre">Modificar Nombre: </label>
+        <input type="text" name="nombre" id="nombre" value="<%= usuarios[0]['nombre'] %>">    <br><br>
+
+        <label for="apellido">Modificar Apellido: </label>
+        <input type="text" name="apellido" id="apellido" value="<%= usuarios[0]['apellido']%>">    <br><br>
+
+        <label for="edad">Modificar Edad: </label>
+        <input type="text" name="edad" id="edad" value="<%= usuarios[0]['edad'] %>">    <br><br>
+
+        <input type="submit" value="modificar">
+    
+    </form>
+    <br>
+
+</body>
+</html>

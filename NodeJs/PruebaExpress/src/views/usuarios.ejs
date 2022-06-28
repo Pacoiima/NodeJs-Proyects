@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Usuarios</title>
+</head>
+<body>
+    
+    <h1>Lista de usuarios</h1>
+
+    
+<table>
+
+    <tr>
+        <td>Id</td>
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>Edad</td>
+        <td>Modificar</td>
+        <td>Eliminar</td>
+        <td><a id="btn-create" href="/usuarios/crear">Crear Usuario</a></td>
+    </tr>
+    <% usuarios.forEach((usuarios)=>{ %>
+        <tr>
+            <td><%= usuarios.id %></td>
+            <td><%= usuarios.nombre %></td>
+            <td><%= usuarios.apellido %></td>
+            <td><%= usuarios.edad %></td>
+            <td><a id="btn-update" href="/usuarios/modificar/<%= usuarios.id %>">Modificar</a></td>
+            <td><a id="btn-delete" href="/usuarios/eliminar/<%= usuarios.id %>">Eliminar</a></td>
+
+        </tr>
+
+  <% }) %>
+</table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+h1{
+    text-align: center;
+    color:blue;
+}
+
+table{
+    margin: 0 auto;
+}
+
+td{
+    padding: 16px;
+    text-align: left;
+    border-bottom:1px solid #ddd ;
+}
+
+#btn-update{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+#btn-delete{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+#btn-create{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+}
