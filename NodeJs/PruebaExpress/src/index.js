@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const usuario = require('./routes/usuarios')
+const adminRouter = require('./routes/index')
 const conexion = require('./conexion')
 const loggedMiddleWare = require('./middlewares/logged')
 
@@ -20,9 +21,10 @@ app.use(express.urlencoded({extended:false}))
 app.get('/', (req, res)=>{
     res.render('index')
 })
-
 app.use('/usuarios', usuario)
+app.use('/index', adminRouter)
 
+//Listen
 app.listen(app.get('port'), ()=>{
     console.log('La '+app.get('title')+' corre perfectamente')
 })
